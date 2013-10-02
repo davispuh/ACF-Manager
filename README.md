@@ -54,6 +54,19 @@ Usage: acf_manager.rb [options]
 * `-o, --output FORMAT`, file format for output, example `-o json`
 * `-s, --save FILE`, file path where to save, example `-s C:\apps.json`
 
+When run without parameters default options will be used. It will try to detect Steam location automatically.
+Default action is _export_ with fields _AppID_, _StateFlags_, _InstallDir_, _SizeOnDisk_, _BuildId_, _UserConfig.Name_, _UserConfig.Installed_, _UserConfig.AppInstallDir_
+and output in CSV format.
+
+### In action
+
+```bash
+[Davis@Fedora ~]$  ruby acf_manager.rb 
+AppID,StateFlags,InstallDir,SizeOnDisk,BuildId,UserConfig.Name,UserConfig.Installed,UserConfig.AppInstallDir
+1510,4,Uplink,46107609,41610,Uplink,true,/home/Dāvis/.local/share/Steam/steamapps/common/Uplink
+38700,4,Toki Tori,92024519,92189,Toki Tori,true,/home/Dāvis/.local/share/Steam/SteamApps/common/Toki Tori
+```
+
 
 ## Documentation
 
